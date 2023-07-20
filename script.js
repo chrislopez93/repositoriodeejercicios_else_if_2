@@ -1,7 +1,7 @@
 function action(){
-    const pesovar = document.querySelector('.peso').value;
-    const alturavar = document.querySelector('.altura').value;
-    const imc = (pesovar/(alturavar * alturavar))*10000;
+    const pesovar = parseFloat(document.querySelector('.peso').value);
+    const alturavar = parseFloat(document.querySelector('.altura').value);
+    const imc = pesovar/(alturavar * alturavar);
     pvar = document.querySelector('.p');
     pvar.innerHTML = imc;
     if (imc < 18.5){
